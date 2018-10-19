@@ -21,8 +21,6 @@ public class ReverseSingleList {
 			p2 = p3;
 			p3 = p3.next;
 		}
-
 		return p3;
-
 	}
 }

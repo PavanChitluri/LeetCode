@@ -29,7 +29,8 @@ public class KeyboardRow {
 			}
 			value++;
 		}
-		List<String> valid = new ArrayList();
+		System.out.println(map);
+		List<String> valid = new ArrayList<>();
 		for (String word : words) {
 			char[] arr = word.toUpperCase().toCharArray();
 			int check = map.get(arr[0]);
@@ -62,6 +63,7 @@ public class KeyboardRow {
 			if (i == str.length())
 				l.add(str);
 		}
+		System.out.println(l);
 		return l.toArray(new String[0]);
 	}
 

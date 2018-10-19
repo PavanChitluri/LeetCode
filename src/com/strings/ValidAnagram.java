@@ -1,17 +1,17 @@
 package com.strings;
+
 import java.util.Arrays;
 
 public class ValidAnagram {
 	public static void main(String[] args) {
-		
+
 		ValidAnagram obj = new ValidAnagram();
 		boolean check = obj.isAnagram("anagram", "nagaram");
 		System.out.println(check);
-		
-	}
-	
-	public boolean isAnagram2(String s, String t) {
 
+	}
+
+	public boolean isAnagram2(String s, String t) {
 		if (s == null || t == null) {
 			return false;
 		}
@@ -33,8 +33,7 @@ public class ValidAnagram {
 		}
 		return check;
 	}
-	
-	
+
 	public boolean isAnagram(String s, String t) {
 
 		if (s == null || t == null) {
@@ -66,10 +65,5 @@ public class ValidAnagram {
 		return check;
 
 	}
-	
-	
-	
-	
-	
-	
+
 }
