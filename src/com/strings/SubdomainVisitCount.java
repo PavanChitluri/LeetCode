@@ -17,8 +17,8 @@ public class SubdomainVisitCount {
 			return null;
 		}
 
-		List<String> list = new ArrayList();
-		Map<String, Integer> map = new HashMap();
+		List<String> list = new ArrayList<>();
+		Map<String, Integer> map = new HashMap<>();
 		for (String string : cpdomains) {
 			String[] split = string.split(" ");
 			int count = Integer.parseInt(split[0]);

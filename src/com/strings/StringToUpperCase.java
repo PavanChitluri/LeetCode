@@ -5,10 +5,11 @@ public class StringToUpperCase {
 	public static void main(String[] args) {
 		
 		StringToUpperCase obj = new StringToUpperCase();
-		System.out.println(obj.tpUpperCase("Pavan Kumar Chitluri"));
+		System.out.println(obj.toUpperCase("Pavan Kumar Chitluri"));
 	}
 	
-	public String tpUpperCase(String input) {
+	public String toUpperCase(String input) {
+		input.toUpperCase();
 	
 		char[] charArray = input.toCharArray();
 		int length = charArray.length;

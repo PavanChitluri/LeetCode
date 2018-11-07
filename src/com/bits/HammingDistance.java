@@ -29,7 +29,7 @@ public class HammingDistance {
 
 		HammingDistance obj = new HammingDistance();
 		System.out.println(obj.hammingDistance(1, 4));
-
+		
 	}
 
 	public int hammingDistance(int x, int y) {
@@ -50,7 +50,6 @@ public class HammingDistance {
 	public int hammingDistance2(int x, int y) {
 		int count = 0;
 		int temp = x ^ y;
-
 		while (temp > 0) {
 			System.out.println(temp);
 			int flag = temp ^ 1;

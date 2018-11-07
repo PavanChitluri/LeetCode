@@ -40,7 +40,6 @@ public class ShortestDistanceToCharacter {
 				}
 			}
 			current++;
-
 		}
 
 		return res;

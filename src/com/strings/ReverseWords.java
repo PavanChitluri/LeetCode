@@ -3,7 +3,7 @@ package com.strings;
 public class ReverseWords {
 	public static void main(String[] args) {
 		ReverseWords obj = new ReverseWords();
-		System.out.println(obj.reverseWords1("Pavan Kumar Chitluri "));
+		System.out.println(obj.reverseWords4("Pavan Kumar Chitluri "));
 	}
 
 	public String reverseWords2(String str) {
