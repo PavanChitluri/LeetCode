@@ -43,36 +43,35 @@ public class InorderTraversal {
 		}
 	}
 
+	/**
+	 * Time complexity O(n)
+	 * space complexity O(1)
+	 */
 	public void morrisTraversal(TreeNode root) {
 		System.out.println("morris travel without stack");
-		TreeNode current, pre;
-		
-		if (root == null)
+		if (root == null) {
 			return;
-		current = root;
-		while (current != null) {
-			if (current.left == null) {
-				System.out.print(current.key + " ");
-				current = current.right;
+		}
+
+		TreeNode curr = root;
+		while (curr != null) {
+			if (curr.left == null) {
+				System.out.print(curr.key + " ");
+				curr = curr.right;
 			} else {
-				pre = current.left;
-				while (pre.right != null && pre.right != current)
-					pre = pre.right;
-
-				if (pre.right == null) {
-					pre.right = current;
-					current = current.left;
+				TreeNode predecessor = curr.left;
+				while (predecessor.right != null && predecessor.right != curr) {
+					predecessor = predecessor.right;
 				}
-
-				else {
-					pre.right = null;
-					System.out.print(current.key + " ");
-					current = current.right;
+				if (predecessor.right == null) {
+					predecessor.right = curr;
+					curr = curr.left;
+				} else {
+					System.out.print(curr.key + " ");
+					curr = curr.right;
+					predecessor.right = null;
 				}
-
 			}
-
 		}
 	}
-
 }

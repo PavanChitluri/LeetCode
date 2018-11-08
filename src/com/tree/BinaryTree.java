@@ -47,7 +47,8 @@ public class BinaryTree {
 			} else {
 				return rightHeight + 1;
 			}
-
+			
+//			 return Math.max(leftHeight, rightHeight)+1
 		}
 	}
 
