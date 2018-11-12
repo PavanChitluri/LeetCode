@@ -1,11 +1,11 @@
 package com.tree;
 
 public class TreeNode {
-	int key;
+	int val;
 	TreeNode left, right;
 
-	public TreeNode(int key) {
-		this.key = key;
+	public TreeNode(int val) {
+		this.val = val;
 		left = null;
 		right = null;
 	}

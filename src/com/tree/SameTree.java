@@ -29,7 +29,7 @@ public class SameTree {
 			return false;
 		}
 
-		return root1.key == root2.key && isSameTree(root1.left, root2.left) && isSameTree(root1.right, root2.right);
+		return root1.val == root2.val && isSameTree(root1.left, root2.left) && isSameTree(root1.right, root2.right);
 
 	}
 }

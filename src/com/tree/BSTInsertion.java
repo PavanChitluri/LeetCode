@@ -18,7 +18,7 @@ public class BSTInsertion {
 	 * @return
 	 */
 	public TreeNode insert(TreeNode root, int data) {
-
+		
 		TreeNode newNode = new TreeNode(data);
 		if (root == null) {
 			return newNode;
@@ -29,19 +29,19 @@ public class BSTInsertion {
 
 		while (current != null) {
 			parent = current;
-			if (current.key <= data) {
+			if (current.val <= data) {
 				current = current.right;
 			} else {
 				current = current.left;
 			}
 		}
 
-		if (parent.key <= data) {
+		if (parent.val <= data) {
 			parent.right = newNode;
-			System.out.println(" inserted right to the " + parent.key);
+			System.out.println(" inserted right to the " + parent.val);
 		} else {
 			parent.left = newNode;
-			System.out.println(" inserted left to the " + parent.key);
+			System.out.println(" inserted left to the " + parent.val);
 		}
 
 		return root;

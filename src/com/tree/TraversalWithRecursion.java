@@ -24,7 +24,7 @@ public class TraversalWithRecursion {
 		if (node == null) {
 			return;
 		} else {
-			System.out.print(node.key + " ");
+			System.out.print(node.val + " ");
 			printPreOrderTraversal(node.left);
 			printPreOrderTraversal(node.right);
 		}
@@ -36,7 +36,7 @@ public class TraversalWithRecursion {
 			return;
 		} else {
 			printInOrderTraversal(node.left);
-			System.out.print(node.key + " ");
+			System.out.print(node.val + " ");
 			printInOrderTraversal(node.right);
 		}
 
@@ -48,7 +48,7 @@ public class TraversalWithRecursion {
 		} else {
 			printPostOrderTraversal(node.left);
 			printPostOrderTraversal(node.right);
-			System.out.print(node.key + " ");
+			System.out.print(node.val + " ");
 		}
 
 	}

@@ -17,13 +17,14 @@ public class LeverOrderTraversal {
 		obj.printTree(root);
 
 	}
-
+	
 	public void printLevelOrderTraversal(TreeNode root) {
 		BinaryTree tree = new BinaryTree();
 		int height = tree.height(root);
-		System.out.println(" height of tree " + height);
-		for (int i = 0; i <= height; i++) {
+		System.out.println("level by level print");
+		for (int i = 1; i <= height; i++) {
 			printEachLevel(root, i);
+			System.out.println();
 		}
 
 	}
@@ -33,7 +34,7 @@ public class LeverOrderTraversal {
 			return;
 		}
 		if (height == 1) {
-			System.out.print(root.key + " ");
+			System.out.print(root.val + " ");
 		} else if (height > 1) {
 			printEachLevel(root.left, height - 1);
 			printEachLevel(root.right, height - 1);
@@ -48,15 +49,14 @@ public class LeverOrderTraversal {
 		Queue<TreeNode> queue = new LinkedList<>();
 		queue.add(root);
 		while (!queue.isEmpty()) {
-			TreeNode temp = queue.peek();
-			queue.remove();
+			TreeNode temp = queue.remove();
 			if (temp.left != null) {
 				queue.add(temp.left);
 			}
 			if (temp.right != null) {
 				queue.add(temp.right);
 			}
-			System.out.print(temp.key + " ");
+			System.out.print(temp.val + " ");
 		}
 
 	}

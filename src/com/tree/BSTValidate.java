@@ -13,7 +13,7 @@ public class BSTValidate {
 
 		return validate(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
 		
-	}
+	} 
 
 	public boolean validate(TreeNode root, int minValue, int maxValue) {
 
@@ -21,9 +21,20 @@ public class BSTValidate {
 			return true;
 		}
 
-		if (minValue >= root.key && root.key < maxValue) {
+		if (root.val <=minValue || root.val > maxValue) {
 			return false;
 		}
-		return validate(root.left, minValue, root.key) && validate(root.right, root.key, maxValue);
+		return validate(root.left, minValue, root.val) && validate(root.right, root.val, maxValue);
+	}
+	
+	
+	
+	public boolean isBSTIterative(TreeNode root) {
+		
+		
+		
+		
+		
+		return false;
 	}
 }

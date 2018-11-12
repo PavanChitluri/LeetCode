@@ -7,18 +7,18 @@ public class BSTSearch {
 		BSTSearch obj = new BSTSearch();
 		TreeNode node = obj.searchRecursion(root, 15);
 		if (node != null) {
-			System.out.println("Element found recusrion method " + node.key);
+			System.out.println("Element found recusrion method " + node.val);
 		} else {
 			System.out.println("Element not found recusrion method ");
 		}
 		node = obj.searchIterative(root, 70);
 		if (node != null) {
-			System.out.println("Element found iterative method " + node.key);
+			System.out.println("Element found iterative method " + node.val);
 		} else {
 			System.out.println("Element not found recusrion method ");
 		}
 	}
-
+	
 	/**
 	 * Time complexity is O(n) for non balanced BST
 	 * Time complexity is O(logn) for balanced BST
@@ -32,9 +32,9 @@ public class BSTSearch {
 			return null;
 		}
 
-		if (root.key == data) {
+		if (root.val == data) {
 			return root;
-		} else if (data < root.key) {
+		} else if (data < root.val) {
 			return searchRecursion(root.left, data);
 		} else {
 			return searchRecursion(root.right, data);
@@ -50,9 +50,9 @@ public class BSTSearch {
 
 		while (root != null) {
 
-			if (root.key == data) {
+			if (root.val == data) {
 				return root;
-			} else if (data < root.key) {
+			} else if (data < root.val) {
 				root = root.left;
 			} else {
 				root = root.right;

@@ -16,7 +16,7 @@ public class RootLeafSum {
 		boolean path = getPath(root, sum, list);
 		if(path) {
 			for (TreeNode treeNode : list) {
-				System.out.print(treeNode.key+" ");
+				System.out.print(treeNode.val+" ");
 			}
 		}
 		
@@ -27,30 +27,38 @@ public class RootLeafSum {
 		if (root == null) {
 			return false;
 		}
-		if (root.key == sum) {
+		/*
+		 *  this if condition gives the path from root to the one of the node in tree, 
+		 *  which gives the sum
+		 */
+		if (root.val == sum) {
 			list.add(root);
 			return true;
 		}
+		
+		/*
+		 *  this if condition gives the path only from root to the leaf node  
+		 *  which gives the sum path 
+		 */
+		
 		/*if (root.left == null && root.right == null) {
-			if (root.key == sum) {
+			if (root.val == sum) {
 				list.add(root);
 				return true;
 			} else {
 				return false;
 			}
 
-		}*/ else {
+		}*/
 
-			if (getPath(root.left, sum - root.key, list)) {
-				list.add(root);
-				return true;
-			}
+		if (getPath(root.left, sum - root.val, list)) {
+			list.add(root);
+			return true;
+		}
 
-			if (getPath(root.right, sum - root.key, list)) {
-				list.add(root);
-				return true;
-			}
-
+		if (getPath(root.right, sum - root.val, list)) {
+			list.add(root);
+			return true;
 		}
 
 		return false;

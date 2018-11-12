@@ -20,7 +20,7 @@ public class InorderTraversal {
 		}
 
 		printByRecursion(root.left);
-		System.out.print(root.key + " ");
+		System.out.print(root.val + " ");
 		printByRecursion(root.right);
 	}
 
@@ -30,14 +30,18 @@ public class InorderTraversal {
 			return;
 		Stack<TreeNode> s = new Stack<>();
 		TreeNode curr = root;
-
-		while (curr != null || s.size() > 0) {
+//		while(curr != null || s.size() > 0)
+		while (true) {
 			while (curr != null) {
 				s.push(curr);
 				curr = curr.left;
 			}
+			if(s.isEmpty()) {
+				break;
+			}
+			
 			curr = s.pop();
-			System.out.print(curr.key + " ");
+			System.out.print(curr.val + " ");
 
 			curr = curr.right;
 		}
@@ -56,7 +60,7 @@ public class InorderTraversal {
 		TreeNode curr = root;
 		while (curr != null) {
 			if (curr.left == null) {
-				System.out.print(curr.key + " ");
+				System.out.print(curr.val + " ");
 				curr = curr.right;
 			} else {
 				TreeNode predecessor = curr.left;
@@ -67,7 +71,7 @@ public class InorderTraversal {
 					predecessor.right = curr;
 					curr = curr.left;
 				} else {
-					System.out.print(curr.key + " ");
+					System.out.print(curr.val + " ");
 					curr = curr.right;
 					predecessor.right = null;
 				}
